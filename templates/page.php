@@ -61,7 +61,7 @@ $config = [
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Vector Search &middot; <?php echo esc_html( $site_name ); ?></title>
+<title><?php echo esc_html__( 'Smart Search', 'wpvdb-smart-search' ); ?> &middot; <?php echo esc_html( $site_name ); ?></title>
 <script>
 	// Anti-FOUC: set data-theme on <html> before the stylesheet paints so the
 	// initial colors match the user's stored or system preference.

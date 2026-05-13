@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-13T19:26:05+00:00\n"
+"POT-Creation-Date: 2026-05-13T21:38:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wpvdb-smart-search\n"
@@ -323,62 +323,53 @@ msgstr ""
 msgid "Too many requests, slow down."
 msgstr ""
 
-#: includes/class-search.php:35
-msgid "Query text is required."
+#: templates/page.php:64
+#: src/App.jsx:262
+msgid "Smart Search"
 msgstr ""
 
-#. translators: %d: maximum number of characters allowed in a query.
-#: includes/class-search.php:42
-#, php-format
-msgid "Query too long (max %d chars)."
+#: wpvdb-smart-search.php:44
+msgid "WPVDB Smart Search requires the WPVDB Search plugin to be active."
 msgstr ""
 
-#: includes/class-search.php:52
-msgid "wpvdb plugin classes not available."
-msgstr ""
-
-#: includes/class-search.php:134
-msgid "Embedding provider is not configured."
-msgstr ""
-
-#: src/App.jsx:143
+#: src/App.jsx:149
 msgid "Enter a query."
 msgstr ""
 
-#: src/App.jsx:184
+#: src/App.jsx:190
 msgid "No luck — no matching article."
 msgstr ""
 
-#: src/App.jsx:260
-msgid "vector + keyword, ranked together"
+#: src/App.jsx:266
+msgid "Search the archive by meaning"
 msgstr ""
 
 #. translators: %s: site name shown as a link to the homepage.
-#: src/App.jsx:296
+#: src/App.jsx:302
 #, js-format
 msgid "Running on %s"
 msgstr ""
 
-#: src/App.jsx:313
+#: src/App.jsx:319
 msgid "An <a>Automattic</a> speedrun"
 msgstr ""
 
-#: src/App.jsx:330
+#: src/App.jsx:336
 msgid "Automattic on GitHub"
 msgstr ""
 
 #. translators: %d: current year.
-#: src/App.jsx:341
+#: src/App.jsx:347
 #, js-format
 msgid "© %d Automattic"
 msgstr ""
 
-#: src/App.jsx:348
+#: src/App.jsx:354
 msgid "Powered by <wpvdb /> on MariaDB 11.8"
 msgstr ""
 
 #. translators: %d: requests per minute allowed per IP.
-#: src/App.jsx:369
+#: src/App.jsx:375
 #, js-format
 msgid "rate-limited %d req/min per IP"
 msgstr ""
@@ -392,7 +383,7 @@ msgid "Runs both dense and sparse, merges via Reciprocal Rank Fusion. Best defau
 msgstr ""
 
 #: src/Form.jsx:19
-msgid "Dense only"
+msgid "Dense"
 msgstr ""
 
 #: src/Form.jsx:20
@@ -400,7 +391,7 @@ msgid "Semantic vector search via VEC_DISTANCE_COSINE. Matches by meaning; weake
 msgstr ""
 
 #: src/Form.jsx:27
-msgid "Sparse only"
+msgid "Sparse"
 msgstr ""
 
 #: src/Form.jsx:28

@@ -67,7 +67,7 @@ class Rest {
 			return new \WP_Error( 'rate_limited', __( 'Too many requests, slow down.', 'wpvdb-smart-search' ), [ 'status' => 429 ] );
 		}
 
-		$result = Search::run(
+		$result = \WPVDB_Search\Search::query(
 			(string) $req->get_param( 'query' ),
 			(int) $req->get_param( 'limit' ),
 			(string) $req->get_param( 'mode' )

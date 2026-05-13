@@ -16,7 +16,7 @@ Agent guidance for this repository. General project information belongs in `READ
 - The REST namespace stays `wpvdb-smart-search/v1`.
 - Display text uses the `wpvdb-smart-search` text domain.
 - The server returns ranked rows; the React client may group rows by post but should not re-rank them.
-- Sparse mode should degrade to an empty result set if the FULLTEXT index is unavailable or the query has no usable terms.
+- Search execution is delegated to `WPVDB_Search\Search`.
 
 ## Development Notes
 

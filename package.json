@@ -15,7 +15,7 @@
 	"private": true,
 	"scripts": {
 		"clean": "rm -rf dist release",
-		"build": "bun run clean && wp-scripts build && bun run pot",
+		"build": "bun run clean && wp-scripts build",
 		"start": "wp-scripts start",
 		"pot": "wp i18n make-pot . languages/wpvdb-smart-search.pot --slug=wpvdb-smart-search --domain=wpvdb-smart-search --exclude=node_modules,vendor,dist,release 2>/dev/null",
 		"lint": "bun run lint:js && bun run lint:css && bun run lint:php",

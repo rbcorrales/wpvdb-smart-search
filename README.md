@@ -6,7 +6,7 @@ It provides a React UI and a public, rate-limited REST adapter for trying dense,
 
 ## Requirements
 
-- WordPress with [`wpvdb`](https://github.com/rbcorrales/wpvdb) installed and configured.
+- WordPress with [`wpvdb`](https://github.com/rbcorrales/wpvdb) and [`wpvdb-search`](https://github.com/rbcorrales/wpvdb-search) installed and configured.
 - PHP 8.0 or newer.
 - MariaDB with native vector support for dense search.
 - Bun for JavaScript dependency management and builds.
@@ -16,15 +16,11 @@ It provides a React UI and a public, rate-limited REST adapter for trying dense,
 
 - The `/smart-search/` public page.
 - The `wpvdb-smart-search/v1` REST namespace.
-- The React UI and browser assets.
+- The React UI, browser assets, and public REST adapter.
 - Demo examples, placeholders, and UI copy.
 - A WP-CLI prewarm command for example query embeddings.
 
-## Search Modes
-
-- **Dense**: semantic vector search through wpvdb query embeddings and MariaDB vector distance.
-- **Sparse**: MariaDB FULLTEXT search over indexed chunk content.
-- **Hybrid**: reciprocal rank fusion over dense and sparse result sets.
+Search execution lives in `wpvdb-search`.
 
 ## Development
 

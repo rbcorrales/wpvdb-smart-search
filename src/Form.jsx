@@ -16,7 +16,7 @@ function modeOptions() {
 		},
 		{
 			value: 'dense',
-			label: __( 'Dense only', 'wpvdb-smart-search' ),
+			label: __( 'Dense', 'wpvdb-smart-search' ),
 			description: __(
 				'Semantic vector search via VEC_DISTANCE_COSINE. Matches by meaning; weaker on exact keywords.',
 				'wpvdb-smart-search'
@@ -24,7 +24,7 @@ function modeOptions() {
 		},
 		{
 			value: 'sparse',
-			label: __( 'Sparse only', 'wpvdb-smart-search' ),
+			label: __( 'Sparse', 'wpvdb-smart-search' ),
 			description: __(
 				'Full-text keyword match via MATCH … AGAINST. Matches exact terms; no semantic understanding.',
 				'wpvdb-smart-search'

@@ -117,15 +117,21 @@ export default function App( { config } ) {
 		if ( typeof window === 'undefined' ) {
 			return;
 		}
-		const params = new URLSearchParams();
+		const params = new URLSearchParams( window.location.search );
 		if ( nextQuery ) {
 			params.set( 'q', nextQuery );
+		} else {
+			params.delete( 'q' );
 		}
 		if ( nextMode && nextMode !== DEFAULT_MODE ) {
 			params.set( 'mode', nextMode );
+		} else {
+			params.delete( 'mode' );
 		}
 		if ( nextLimit && nextLimit !== DEFAULT_LIMIT ) {
 			params.set( 'limit', String( nextLimit ) );
+		} else {
+			params.delete( 'limit' );
 		}
 		const qs = params.toString();
 		const url = window.location.pathname + ( qs ? '?' + qs : '' );
@@ -253,11 +259,11 @@ export default function App( { config } ) {
 							href={ resetHref }
 							className="text-[var(--color-ink)] no-underline hover:no-underline"
 						>
-							Smart Search
+							{ __( 'Smart Search', 'wpvdb-smart-search' ) }
 						</a>
 					</h1>
 					<p className="mt-2 text-[13px] text-[var(--color-muted)]">
-						{ __( 'vector + keyword, ranked together', 'wpvdb-smart-search' ) }
+						{ __( 'Search the archive by meaning', 'wpvdb-smart-search' ) }
 					</p>
 				</div>
 

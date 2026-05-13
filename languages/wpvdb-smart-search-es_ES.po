@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPVDB Smart Search 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpvdb-smart-"
 "search\n"
-"POT-Creation-Date: 2026-05-13T19:15:33+00:00\n"
+"POT-Creation-Date: 2026-05-13T21:38:44+00:00\n"
 "PO-Revision-Date: 2026-05-13 14:03-0500\n"
 "Last-Translator: Ramon Corrales\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -327,60 +327,50 @@ msgstr "Pregunta como un humano, no como una consulta SQL…"
 msgid "Too many requests, slow down."
 msgstr "Demasiadas solicitudes, por favor espera un momento."
 
-#: includes/class-search.php:35
-msgid "Query text is required."
-msgstr "El texto de la consulta es obligatorio."
+#: templates/page.php:64 src/App.jsx:262
+msgid "Smart Search"
+msgstr "Smart Search"
 
-#. translators: %d: maximum number of characters allowed in a query.
-#: includes/class-search.php:42
-#, php-format
-msgid "Query too long (max %d chars)."
-msgstr "Consulta demasiado larga (máximo %d caracteres)."
+#: wpvdb-smart-search.php:44
+msgid "WPVDB Smart Search requires the WPVDB Search plugin to be active."
+msgstr "WPVDB Smart Search requiere que el plugin WPVDB Search esté activo."
 
-#: includes/class-search.php:52
-msgid "wpvdb plugin classes not available."
-msgstr "Las clases del plugin wpvdb no están disponibles."
-
-#: includes/class-search.php:134
-msgid "Embedding provider is not configured."
-msgstr "El proveedor de embeddings no está configurado."
-
-#: src/App.jsx:143
+#: src/App.jsx:149
 msgid "Enter a query."
 msgstr "Escribe una consulta."
 
-#: src/App.jsx:184
+#: src/App.jsx:190
 msgid "No luck — no matching article."
 msgstr "Sin suerte: no hay artículo coincidente."
 
-#: src/App.jsx:260
-msgid "vector + keyword, ranked together"
-msgstr "vector + palabra clave, ordenados juntos"
+#: src/App.jsx:266
+msgid "Search the archive by meaning"
+msgstr "Busca en el archivo por significado"
 
 #. translators: %s: site name shown as a link to the homepage.
-#: src/App.jsx:296
+#: src/App.jsx:302
 msgid "Running on %s"
 msgstr "Funcionando en %s"
 
-#: src/App.jsx:313
+#: src/App.jsx:319
 msgid "An <a>Automattic</a> speedrun"
 msgstr "Un speedrun de <a>Automattic</a>"
 
-#: src/App.jsx:330
+#: src/App.jsx:336
 msgid "Automattic on GitHub"
 msgstr "Automattic en GitHub"
 
 #. translators: %d: current year.
-#: src/App.jsx:341
+#: src/App.jsx:347
 msgid "© %d Automattic"
 msgstr "© %d Automattic"
 
-#: src/App.jsx:348
+#: src/App.jsx:354
 msgid "Powered by <wpvdb /> on MariaDB 11.8"
 msgstr "Funciona con <wpvdb /> sobre MariaDB 11.8"
 
 #. translators: %d: requests per minute allowed per IP.
-#: src/App.jsx:369
+#: src/App.jsx:375
 msgid "rate-limited %d req/min per IP"
 msgstr "límite de %d solicitudes/min por IP"
 
@@ -396,8 +386,8 @@ msgstr ""
 "recomendada."
 
 #: src/Form.jsx:19
-msgid "Dense only"
-msgstr "Solo denso"
+msgid "Dense"
+msgstr "Denso"
 
 #: src/Form.jsx:20
 msgid ""
@@ -408,8 +398,8 @@ msgstr ""
 "significado; más débil con palabras exactas."
 
 #: src/Form.jsx:27
-msgid "Sparse only"
-msgstr "Solo disperso"
+msgid "Sparse"
+msgstr "Disperso"
 
 #: src/Form.jsx:28
 msgid ""
