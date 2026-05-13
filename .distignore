@@ -1,0 +1,31 @@
+# Files to exclude from the release bundle.
+.babelrc
+.editorconfig
+.*ignore
+.*rc*
+*.config.js
+.git
+.DS_Store
+Thumbs.db
+composer.json
+composer.lock
+package.json
+package-lock.json
+phpcs.xml
+README.md
+webpack.config.js
+yarn.lock
+*.sql
+*.tar.gz
+*.zip
+
+# Directories
+node_modules
+.cache
+.git
+.github
+/src
+/release
+/vendor
+AGENTS.md
+CLAUDE.md

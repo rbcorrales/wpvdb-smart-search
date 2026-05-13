@@ -1,0 +1,550 @@
+# Copyright (C) 2026 Automattic, Ramon Corrales
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPVDB Smart Search 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpvdb-smart-search\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-05-13T19:26:05+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wpvdb-smart-search\n"
+
+#. Plugin Name of the plugin
+#: wpvdb-smart-search.php
+msgid "WPVDB Smart Search"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wpvdb-smart-search.php
+msgid "https://github.com/rbcorrales/wpvdb-smart-search"
+msgstr ""
+
+#. Description of the plugin
+#: wpvdb-smart-search.php
+msgid "Adds a public Smart Search page and REST endpoint for wpvdb dense, sparse, and hybrid search."
+msgstr ""
+
+#. Author of the plugin
+#: wpvdb-smart-search.php
+msgid "Automattic, Ramon Corrales"
+msgstr ""
+
+#. Author URI of the plugin
+#: wpvdb-smart-search.php
+msgid "https://automattic.com/"
+msgstr ""
+
+#: includes/class-content.php:26
+msgid "market jitters"
+msgstr ""
+
+#: includes/class-content.php:26
+msgid "markets reacting to economic uncertainty"
+msgstr ""
+
+#: includes/class-content.php:27
+msgid "diplomatic tension"
+msgstr ""
+
+#: includes/class-content.php:27
+msgid "diplomatic tension between major powers"
+msgstr ""
+
+#: includes/class-content.php:28
+msgid "celebrity charity"
+msgstr ""
+
+#: includes/class-content.php:28
+msgid "celebrity charity efforts"
+msgstr ""
+
+#: includes/class-content.php:29
+msgid "extreme weather"
+msgstr ""
+
+#: includes/class-content.php:29
+msgid "extreme weather events"
+msgstr ""
+
+#: includes/class-content.php:30
+msgid "greenwashing"
+msgstr ""
+
+#: includes/class-content.php:30
+msgid "corporate hypocrisy and greenwashing"
+msgstr ""
+
+#: includes/class-content.php:31
+msgid "public figures"
+msgstr ""
+
+#: includes/class-content.php:31
+msgid "public figure controversies"
+msgstr ""
+
+#: includes/class-content.php:32
+msgid "generational shift"
+msgstr ""
+
+#: includes/class-content.php:32
+msgid "generational shifts in attitudes"
+msgstr ""
+
+#: includes/class-content.php:33
+msgid "social media"
+msgstr ""
+
+#: includes/class-content.php:33
+msgid "social media shaping public opinion"
+msgstr ""
+
+#: includes/class-content.php:34
+msgid "veterans’ benefits"
+msgstr ""
+
+#: includes/class-content.php:34
+msgid "veterans and their benefits"
+msgstr ""
+
+#: includes/class-content.php:35
+msgid "school safety"
+msgstr ""
+
+#: includes/class-content.php:35
+msgid "school safety debates"
+msgstr ""
+
+#: includes/class-content.php:36
+msgid "animal welfare"
+msgstr ""
+
+#: includes/class-content.php:36
+msgid "animal welfare stories"
+msgstr ""
+
+#: includes/class-content.php:37
+msgid "rebuilding"
+msgstr ""
+
+#: includes/class-content.php:37
+msgid "rebuilding after natural disasters"
+msgstr ""
+
+#: includes/class-content.php:38
+msgid "missing persons"
+msgstr ""
+
+#: includes/class-content.php:38
+msgid "missing persons cases that captured public attention"
+msgstr ""
+
+#: includes/class-content.php:39
+msgid "Olympic moments"
+msgstr ""
+
+#: includes/class-content.php:39
+msgid "Olympic Games triumphs and athletes stories"
+msgstr ""
+
+#: includes/class-content.php:40
+msgid "plane crashes"
+msgstr ""
+
+#: includes/class-content.php:40
+msgid "commercial aviation disasters and investigations"
+msgstr ""
+
+#: includes/class-content.php:41
+msgid "police misconduct"
+msgstr ""
+
+#: includes/class-content.php:41
+msgid "complaints of police misconduct and excessive force"
+msgstr ""
+
+#: includes/class-content.php:42
+msgid "wildfires"
+msgstr ""
+
+#: includes/class-content.php:42
+msgid "wildfires destroying communities and homes"
+msgstr ""
+
+#: includes/class-content.php:43
+msgid "medical breakthroughs"
+msgstr ""
+
+#: includes/class-content.php:43
+msgid "medical research breakthroughs and new treatments"
+msgstr ""
+
+#: includes/class-content.php:44
+msgid "cyber attacks"
+msgstr ""
+
+#: includes/class-content.php:44
+msgid "cyberattacks and major data breaches"
+msgstr ""
+
+#: includes/class-content.php:45
+msgid "abuse scandals"
+msgstr ""
+
+#: includes/class-content.php:45
+msgid "institutions covering up sexual abuse"
+msgstr ""
+
+#: includes/class-content.php:46
+msgid "wartime stories"
+msgstr ""
+
+#: includes/class-content.php:46
+msgid "wartime experiences of soldiers and civilians"
+msgstr ""
+
+#: includes/class-content.php:47
+msgid "wildlife conservation"
+msgstr ""
+
+#: includes/class-content.php:47
+msgid "endangered wildlife and conservation efforts"
+msgstr ""
+
+#: includes/class-content.php:48
+msgid "fertility advances"
+msgstr ""
+
+#: includes/class-content.php:48
+msgid "advances in fertility treatments and reproductive medicine"
+msgstr ""
+
+#: includes/class-content.php:49
+msgid "auto recalls"
+msgstr ""
+
+#: includes/class-content.php:49
+msgid "major auto recalls and vehicle safety investigations"
+msgstr ""
+
+#: includes/class-content.php:50
+msgid "royal family"
+msgstr ""
+
+#: includes/class-content.php:50
+msgid "British royal family events and traditions"
+msgstr ""
+
+#: includes/class-content.php:54
+msgid "Search by meaning, not keywords…"
+msgstr ""
+
+#: includes/class-content.php:55
+msgid "Describe an idea, theme, or event…"
+msgstr ""
+
+#: includes/class-content.php:56
+msgid "What kind of story are you after?"
+msgstr ""
+
+#: includes/class-content.php:57
+msgid "Try a concept, a trend, or a mood…"
+msgstr ""
+
+#: includes/class-content.php:58
+msgid "Ask for what you want, not what it’s called…"
+msgstr ""
+
+#: includes/class-content.php:59
+msgid "What are you curious about today?"
+msgstr ""
+
+#: includes/class-content.php:60
+msgid "Type a theme, not a keyword…"
+msgstr ""
+
+#: includes/class-content.php:61
+msgid "Tell it like you’d tell a friend…"
+msgstr ""
+
+#: includes/class-content.php:62
+msgid "Think fuzzy, not exact…"
+msgstr ""
+
+#: includes/class-content.php:63
+msgid "A feeling, a trend, a half-remembered headline…"
+msgstr ""
+
+#: includes/class-content.php:64
+msgid "Be vague. We’ll figure it out…"
+msgstr ""
+
+#: includes/class-content.php:65
+msgid "Explain it like I’m a database…"
+msgstr ""
+
+#: includes/class-content.php:66
+msgid "We accept mumbles…"
+msgstr ""
+
+#: includes/class-content.php:67
+msgid "Don’t overthink it. Just type…"
+msgstr ""
+
+#: includes/class-content.php:68
+msgid "Type a hunch…"
+msgstr ""
+
+#: includes/class-content.php:69
+msgid "Whisper an idea into the void…"
+msgstr ""
+
+#: includes/class-content.php:70
+msgid "Close enough works here…"
+msgstr ""
+
+#: includes/class-content.php:71
+msgid "Bring your loosest query…"
+msgstr ""
+
+#: includes/class-content.php:72
+msgid "Describe, don’t define…"
+msgstr ""
+
+#: includes/class-content.php:73
+msgid "Ask it like a human, not a SQL query…"
+msgstr ""
+
+#: includes/class-rest.php:67
+msgid "Too many requests, slow down."
+msgstr ""
+
+#: includes/class-search.php:35
+msgid "Query text is required."
+msgstr ""
+
+#. translators: %d: maximum number of characters allowed in a query.
+#: includes/class-search.php:42
+#, php-format
+msgid "Query too long (max %d chars)."
+msgstr ""
+
+#: includes/class-search.php:52
+msgid "wpvdb plugin classes not available."
+msgstr ""
+
+#: includes/class-search.php:134
+msgid "Embedding provider is not configured."
+msgstr ""
+
+#: src/App.jsx:143
+msgid "Enter a query."
+msgstr ""
+
+#: src/App.jsx:184
+msgid "No luck — no matching article."
+msgstr ""
+
+#: src/App.jsx:260
+msgid "vector + keyword, ranked together"
+msgstr ""
+
+#. translators: %s: site name shown as a link to the homepage.
+#: src/App.jsx:296
+#, js-format
+msgid "Running on %s"
+msgstr ""
+
+#: src/App.jsx:313
+msgid "An <a>Automattic</a> speedrun"
+msgstr ""
+
+#: src/App.jsx:330
+msgid "Automattic on GitHub"
+msgstr ""
+
+#. translators: %d: current year.
+#: src/App.jsx:341
+#, js-format
+msgid "© %d Automattic"
+msgstr ""
+
+#: src/App.jsx:348
+msgid "Powered by <wpvdb /> on MariaDB 11.8"
+msgstr ""
+
+#. translators: %d: requests per minute allowed per IP.
+#: src/App.jsx:369
+#, js-format
+msgid "rate-limited %d req/min per IP"
+msgstr ""
+
+#: src/Form.jsx:11
+msgid "Hybrid (RRF)"
+msgstr ""
+
+#: src/Form.jsx:12
+msgid "Runs both dense and sparse, merges via Reciprocal Rank Fusion. Best default."
+msgstr ""
+
+#: src/Form.jsx:19
+msgid "Dense only"
+msgstr ""
+
+#: src/Form.jsx:20
+msgid "Semantic vector search via VEC_DISTANCE_COSINE. Matches by meaning; weaker on exact keywords."
+msgstr ""
+
+#: src/Form.jsx:27
+msgid "Sparse only"
+msgstr ""
+
+#: src/Form.jsx:28
+msgid "Full-text keyword match via MATCH … AGAINST. Matches exact terms; no semantic understanding."
+msgstr ""
+
+#: src/Form.jsx:38
+msgid "Keyword Search"
+msgstr ""
+
+#: src/Form.jsx:39
+msgid "Semantic Search"
+msgstr ""
+
+#: src/Form.jsx:81
+msgid "Search query"
+msgstr ""
+
+#: src/Form.jsx:100
+msgid "Surprise Me!"
+msgstr ""
+
+#: src/Form.jsx:106
+msgid "Mode"
+msgstr ""
+
+#: src/Form.jsx:112
+msgid "Results"
+msgstr ""
+
+#: src/Form.jsx:121
+msgid "Try:"
+msgstr ""
+
+#: src/HelpPopover.jsx:35
+msgid "About this demo"
+msgstr ""
+
+#. translators: %s: site name (rendered as a link to the homepage).
+#: src/HelpPopover.jsx:44
+#, js-format
+msgid "Hybrid vector + keyword search over the corpus indexed on <site>%s</site>. Only the query text is sent to OpenAI (once, to <embed>embed it</embed>); all ranking happens inside MariaDB via <cosine>VEC_DISTANCE_COSINE</cosine> (dense) and <match>MATCH … AGAINST</match> (sparse), merged with <rrf>Reciprocal Rank Fusion</rrf>."
+msgstr ""
+
+#: src/HelpPopover.jsx:103
+msgid "How this works"
+msgstr ""
+
+#: src/LanguageToggle.jsx:66
+msgid "Language"
+msgstr ""
+
+#: src/Results.jsx:30
+msgid "dense + sparse"
+msgstr ""
+
+#: src/Results.jsx:37
+#: src/Results.jsx:94
+msgid "dense"
+msgstr ""
+
+#: src/Results.jsx:43
+#: src/Results.jsx:109
+msgid "sparse"
+msgstr ""
+
+#. translators: 1: number of results; 2: quoted query text.
+#: src/Results.jsx:64
+#, js-format
+msgid "Showing <n>%1$d</n> results for <q>“%2$s”</q>"
+msgstr ""
+
+#: src/Results.jsx:78
+msgid "mode"
+msgstr ""
+
+#. translators: %d: number of posts.
+#: src/Results.jsx:82
+#, js-format
+msgid "%d post"
+msgid_plural "%d posts"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: total number of indexed vectors searched.
+#: src/Results.jsx:89
+#, js-format
+msgid "searched <n>%d</n> vectors"
+msgstr ""
+
+#: src/Results.jsx:99
+msgid "embedding API roundtrip for the query text + MariaDB VEC_DISTANCE_COSINE scan"
+msgstr ""
+
+#: src/Results.jsx:100
+msgid "embed"
+msgstr ""
+
+#: src/Results.jsx:103
+msgid "db"
+msgstr ""
+
+#. translators: %s: total query time (already formatted with its unit, e.g. "530ms" or "1.25s").
+#: src/Results.jsx:114
+#, js-format
+msgid "total <n>%s</n>"
+msgstr ""
+
+#: src/Results.jsx:150
+msgid "no dense match"
+msgstr ""
+
+#: src/Results.jsx:155
+msgid "distance"
+msgstr ""
+
+#: src/Results.jsx:162
+msgid "MariaDB FULLTEXT relevance score"
+msgstr ""
+
+#: src/Results.jsx:163
+msgid "fulltext"
+msgstr ""
+
+#. translators: %d: number of chunks that matched for a post.
+#: src/Results.jsx:173
+#, js-format
+msgid "%d chunk"
+msgid_plural "%d chunks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Results.jsx:199
+msgid "Searching"
+msgstr ""
+
+#: src/Results.jsx:221
+msgid "No results."
+msgstr ""
+
+#: src/ThemeToggle.jsx:51
+msgid "Switch to light mode"
+msgstr ""
+
+#: src/ThemeToggle.jsx:52
+msgid "Switch to dark mode"
+msgstr ""

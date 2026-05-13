@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/**
+ * Modern dual-palette design tokens. We expose them both through Tailwind's
+ * @theme (so utility classes resolve them at build time) AND override them
+ * under a `[data-theme="dark"]` selector so runtime theme switching works
+ * without a rebuild.
+ *
+ * Naming convention:
+ *   --color-{surface}      background-ish (bg, panel, footer)
+ *   --color-{text-role}    text-ish       (ink, muted, subtle)
+ *   --color-{border}       borders
+ *   --color-accent*        primary brand action color
+ *   --color-badge-*-*      mode-source badges (dense/sparse/both)
+ *   --color-{status}-*     semantic (error, warning)
+ */
+@theme {
+	--color-bg: #fafafa;
+	--color-panel: #fff;
+	--color-footer-bg: #f4f4f5;
+
+	--color-ink: #18181b;
+	--color-muted: #71717a;
+	--color-subtle: #a1a1aa;
+
+	--color-border: #e4e4e7;
+	--color-border-strong: #d4d4d8;
+
+	--color-accent: #6366f1;
+	--color-accent-hover: #4f46e5;
+	--color-accent-fg: #fff;
+
+	--color-chunk-bg: #f4f4f5;
+	--color-panel-alt: #f4f4f5;
+	--color-hover: #e4e4e7;
+	--color-selected: #eef2ff;
+	--color-code-bg: #f4f4f5;
+
+	--color-badge-dense-bg: #e0e7ff;
+	--color-badge-dense-fg: #3730a3;
+	--color-badge-sparse-bg: #fae8ff;
+	--color-badge-sparse-fg: #86198f;
+	--color-badge-both-bg: #d1fae5;
+	--color-badge-both-fg: #065f46;
+
+	--color-error-bg: #fef2f2;
+	--color-error-fg: #991b1b;
+	--color-error-border: #fecaca;
+	--color-warning-bg: #fefce8;
+	--color-warning-fg: #854d0e;
+	--color-warning-border: #fde68a;
+
+	--shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.04);
+	--shadow-popover: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+	color-scheme: dark;
+
+	--color-bg: #09090b;
+	--color-panel: #18181b;
+	--color-footer-bg: #111113;
+
+	--color-ink: #fafafa;
+	--color-muted: #a1a1aa;
+	--color-subtle: #71717a;
+
+	--color-border: #27272a;
+	--color-border-strong: #3f3f46;
+
+	--color-accent: #818cf8;
+	--color-accent-hover: #a5b4fc;
+	--color-accent-fg: #0b0b10;
+
+	--color-chunk-bg: #1c1c20;
+	--color-panel-alt: #27272a;
+	--color-hover: #3f3f46;
+	--color-selected: #312e81;
+	--color-code-bg: #27272a;
+
+	--color-badge-dense-bg: #1e1b4b;
+	--color-badge-dense-fg: #c7d2fe;
+	--color-badge-sparse-bg: #4a044e;
+	--color-badge-sparse-fg: #f5d0fe;
+	--color-badge-both-bg: #064e3b;
+	--color-badge-both-fg: #6ee7b7;
+
+	--color-error-bg: #3f1212;
+	--color-error-fg: #fecaca;
+	--color-error-border: #7f1d1d;
+	--color-warning-bg: #3f2b07;
+	--color-warning-fg: #fde68a;
+	--color-warning-border: #78350f;
+
+	--shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.4);
+	--shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+html {
+	color-scheme: light;
+}
+
+body {
+	background: var(--color-bg);
+	color: var(--color-ink);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Scoped theme transitions: avoid global `*` so we don't fight React-driven
+   interactions (spinner rotation, popover open/close). */
+button,
+input,
+select,
+textarea,
+.themed-surface {
+	transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+a {
+	color: var(--color-ink);
+	text-decoration: underline;
+	text-decoration-color: color-mix(in srgb, currentcolor 30%, transparent);
+	text-underline-offset: 2px;
+	transition: text-decoration-color 150ms ease;
+}
+
+a:hover {
+	text-decoration-color: currentcolor;
+}
+
+/* Title acts as a reset link but should read as plain text. */
+h1 a,
+h1 a:hover {
+	text-decoration: none;
+	color: var(--color-ink);
+}
+
+@keyframes wpvdb-spin {
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.wpvdb-spinner {
+	width: 32px;
+	height: 32px;
+	margin: 32px auto;
+	border: 3px solid var(--color-border);
+	border-top-color: var(--color-accent);
+	border-radius: 50%;
+	animation: wpvdb-spin 650ms linear infinite;
+}
