@@ -6,7 +6,8 @@
  * Version:          0.1.0
  * Author:           Automattic, Ramon Corrales
  * Author URI:       https://automattic.com/
- * Requires PHP:     8.0
+ * Requires at least: 6.9
+ * Requires PHP:     8.3
  * Requires Plugins: wpvdb, wpvdb-search
  * License:          GPL-2.0-or-later
  * License URI:      https://www.gnu.org/licenses/gpl-2.0.html

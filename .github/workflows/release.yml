@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Version tag to release, for example v0.1.1
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    uses: rbcorrales/wpvdb-scripts/.github/workflows/plugin-release.yml@main
+    with:
+      tag: ${{ github.event.inputs.tag || github.ref_name }}
+      plugin-slug: wpvdb-smart-search
+      plugin-file: wpvdb-smart-search.php
+      bun-install: true
+      bun-lint-command: bun run lint
+      build-command: bun run build
+      required-artifacts: |
+        dist/smart-search.js
+        dist/smart-search.css
+      exclude-src: true

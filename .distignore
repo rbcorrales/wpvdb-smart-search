@@ -5,16 +5,22 @@
 .*rc*
 *.config.js
 .git
+.github
+.hooks
+.phpcs-cache
 .DS_Store
 Thumbs.db
+*.lock
 composer.json
 composer.lock
 package.json
 package-lock.json
 phpcs.xml
+phpstan.neon.dist
 README.md
 webpack.config.js
 yarn.lock
+*.po~
 *.sql
 *.tar.gz
 *.zip
@@ -22,8 +28,6 @@ yarn.lock
 # Directories
 node_modules
 .cache
-.git
-.github
 /src
 /release
 /vendor

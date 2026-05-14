@@ -17,7 +17,7 @@
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 
 	<rule ref="PHPCompatibilityWP"/>
-	<config name="testVersion" value="8.0-"/>
+	<config name="testVersion" value="8.3-"/>
 
 	<arg name="extensions" value="php"/>
 
@@ -26,6 +26,7 @@
 
 	<file>.</file>
 
+	<exclude-pattern>*/.github/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/dist/*</exclude-pattern>
