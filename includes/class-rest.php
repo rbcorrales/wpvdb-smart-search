@@ -2,8 +2,8 @@
 /**
  * REST route: POST /wpvdb-smart-search/v1/search
  *
- * Public, rate-limited. Accepts { query, limit, mode } where mode is one of
- * hybrid | dense | sparse. Intentionally avoids wpvdb's auth-gated /query.
+ * Public, rate-limited. Accepts { query, limit, mode, collapse_by_post }
+ * where mode is one of hybrid | dense | sparse.
  *
  * @package WPVDB_Smart_Search
  */
@@ -39,17 +39,21 @@ class Rest {
 				'callback'            => [ __CLASS__, 'handle' ],
 				'permission_callback' => '__return_true',
 				'args'                => [
-					'query' => [
+					'query'            => [
 						'type'     => 'string',
 						'required' => true,
 					],
-					'limit' => [
+					'limit'            => [
 						'type'    => 'integer',
 						'default' => 10,
 					],
-					'mode'  => [
+					'mode'             => [
 						'type'    => 'string',
 						'default' => 'hybrid',
+					],
+					'collapse_by_post' => [
+						'type'    => 'boolean',
+						'default' => false,
 					],
 				],
 			]
@@ -67,16 +71,36 @@ class Rest {
 			return new \WP_Error( 'rate_limited', __( 'Too many requests, slow down.', 'wpvdb-smart-search' ), [ 'status' => 429 ] );
 		}
 
-		$result = \WPVDB_Search\Search::query(
-			(string) $req->get_param( 'query' ),
-			(int) $req->get_param( 'limit' ),
-			(string) $req->get_param( 'mode' )
+		$result = \WPVDB_Search\Search::run(
+			[
+				'query'            => (string) $req->get_param( 'query' ),
+				'limit'            => (int) $req->get_param( 'limit' ),
+				'mode'             => (string) $req->get_param( 'mode' ),
+				'collapse_by_post' => (bool) $req->get_param( 'collapse_by_post' ),
+				'include_debug'    => true,
+			]
 		);
 
 		if ( is_wp_error( $result ) ) {
 			return $result;
 		}
-		return rest_ensure_response( $result );
+
+		$debug = isset( $result['debug'] ) && is_array( $result['debug'] ) ? $result['debug'] : [];
+		unset( $result['debug'] );
+
+		return rest_ensure_response(
+			array_merge(
+				[
+					'mode'  => $result['mode'],
+					'query' => $result['query'],
+					'limit' => $result['limit'],
+				],
+				$debug,
+				[
+					'results' => $result['results'],
+				]
+			)
+		);
 	}
 
 	/**
