@@ -7,6 +7,8 @@
 
 Demo search UI and REST adapter for dense, sparse, and hybrid search over content indexed by [`wpvdb`](https://github.com/rbcorrales/wpvdb).
 
+![WPVDB Smart Search interface](docs/screenshots/screenshot.png)
+
 ## Requirements
 
 | Requirement | Version or notes |

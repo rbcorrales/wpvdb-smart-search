@@ -28,6 +28,7 @@ yarn.lock
 # Directories
 node_modules
 .cache
+/docs
 /src
 /release
 /vendor
