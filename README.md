@@ -1,32 +1,58 @@
 # WPVDB Smart Search
 
-WPVDB Smart Search adds a public Smart Search page and REST endpoint for wpvdb dense, sparse, and hybrid search.
+[![Checks](https://github.com/rbcorrales/wpvdb-smart-search/actions/workflows/ci.yml/badge.svg)](https://github.com/rbcorrales/wpvdb-smart-search/actions/workflows/ci.yml)
+[![WordPress](https://img.shields.io/badge/WordPress-6.9%2B-3858e9?logo=wordpress&logoColor=white)](#requirements)
+[![PHP](https://img.shields.io/badge/PHP-8.3%2B-777bb4?logo=php&logoColor=white)](#requirements)
+[![License](https://img.shields.io/badge/License-GPLv2%2B-blue.svg)](LICENSE)
 
-It provides a React UI and a public, rate-limited REST adapter for trying dense, sparse, and hybrid search over content indexed by wpvdb.
+Demo search UI and REST adapter for dense, sparse, and hybrid search over content indexed by [`wpvdb`](https://github.com/rbcorrales/wpvdb).
 
 ## Requirements
 
-- WordPress with [`wpvdb`](https://github.com/rbcorrales/wpvdb) and [`wpvdb-search`](https://github.com/rbcorrales/wpvdb-search) installed and configured.
-- PHP 8.0 or newer.
-- MariaDB with native vector support for dense search.
-- Bun for JavaScript dependency management and builds.
-- Composer for PHP development tooling.
+| Requirement | Version or notes |
+|---|---|
+| WordPress | 6.9 or newer |
+| PHP | 8.3 or newer |
+| [`wpvdb-search`](https://github.com/rbcorrales/wpvdb-search) | Installed and configured |
 
-## What This Plugin Owns
+## What this plugin owns
 
 - The `/smart-search/` public page.
 - The `wpvdb-smart-search/v1` REST namespace.
-- The React UI, browser assets, and public REST adapter.
+- The React UI, browser assets, and REST adapter.
 - Demo examples, placeholders, and UI copy.
 - A WP-CLI prewarm command for example query embeddings.
 
-Search execution lives in `wpvdb-search`.
+Search execution lives in [`wpvdb-search`](https://github.com/rbcorrales/wpvdb-search).
 
 ## Development
 
-Install dependencies with Bun and Composer, then use the scripts declared in `package.json` and `composer.json` for build, lint, fix, and release tasks.
+Install dependencies:
 
-The generated asset, dependency, and release directories are intentionally ignored by git.
+```bash
+bun install
+composer install
+```
+
+Build the browser assets:
+
+```bash
+bun run build
+```
+
+Run the local checks:
+
+```bash
+bun run lint
+```
+
+The main branch maintenance workflow regenerates translation files and commits them when strings change.
+
+Run the same command locally only when you want to preview language file changes:
+
+```bash
+bun run i18n
+```
 
 ## License
 
