@@ -17,7 +17,11 @@ package.json
 package-lock.json
 phpcs.xml
 phpstan.neon.dist
+AGENTS.md
+CLAUDE.md
+CONTRIBUTING.md
 README.md
+SECURITY.md
 webpack.config.js
 yarn.lock
 *.po~
@@ -32,5 +36,3 @@ node_modules
 /src
 /release
 /vendor
-AGENTS.md
-CLAUDE.md
