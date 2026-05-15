@@ -1,7 +1,6 @@
 <?php
 /**
- * Template: serves /smart-search as a standalone HTML page with no theme
- * chrome. Uses parse_request to avoid rewrite-rule flushes.
+ * Template: serves /smart-search as a standalone HTML page.
  *
  * @package WPVDB_Smart_Search
  */
@@ -15,25 +14,80 @@ defined( 'ABSPATH' ) || exit;
  */
 class Template {
 	const PUBLIC_PATH = 'smart-search';
+	const QUERY_VAR   = 'wpvdb_smart_search';
 
 	/**
 	 * Register hooks.
 	 */
-	public static function init() {
-		add_action( 'parse_request', [ __CLASS__, 'maybe_render' ], 0 );
+	public static function init(): void {
+		add_action( 'init', [ __CLASS__, 'register_rewrite_rule' ] );
+		add_filter( 'query_vars', [ __CLASS__, 'register_query_var' ] );
+		add_action( 'template_redirect', [ __CLASS__, 'maybe_render' ], 0 );
+	}
+
+	/**
+	 * Register the public Smart Search rewrite rule.
+	 */
+	public static function register_rewrite_rule(): void {
+		add_rewrite_rule(
+			'^' . self::PUBLIC_PATH . '/?$',
+			'index.php?' . self::QUERY_VAR . '=1',
+			'top'
+		);
+	}
+
+	/**
+	 * Register the query var used by the Smart Search rewrite rule.
+	 *
+	 * @param array<string> $vars Public query vars.
+	 * @return array<string>
+	 */
+	public static function register_query_var( array $vars ): array {
+		if ( ! in_array( self::QUERY_VAR, $vars, true ) ) {
+			$vars[] = self::QUERY_VAR;
+		}
+
+		return $vars;
+	}
+
+	/**
+	 * Flush rewrites on plugin activation after registering this plugin's rule.
+	 */
+	public static function activate(): void {
+		self::register_rewrite_rule();
+		flush_rewrite_rules(); // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.flush_rewrite_rules_flush_rewrite_rules
+	}
+
+	/**
+	 * Flush rewrites on plugin deactivation to remove this plugin's rule.
+	 */
+	public static function deactivate(): void {
+		remove_action( 'init', [ __CLASS__, 'register_rewrite_rule' ] );
+		self::remove_rewrite_rule();
+		flush_rewrite_rules(); // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.flush_rewrite_rules_flush_rewrite_rules
+	}
+
+	/**
+	 * Remove this plugin's rule from the in-memory rewrite state.
+	 */
+	private static function remove_rewrite_rule(): void {
+		global $wp_rewrite;
+
+		if ( ! $wp_rewrite instanceof \WP_Rewrite ) {
+			return;
+		}
+
+		unset( $wp_rewrite->extra_rules_top[ '^' . self::PUBLIC_PATH . '/?$' ] );
 	}
 
 	/**
 	 * If the current request is /smart-search, render and exit.
 	 */
-	public static function maybe_render() {
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- We only compare against a literal path, no echo.
-		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) $_SERVER['REQUEST_URI'] : '';
-		$uri         = strtok( $request_uri, '?' );
-		$uri         = '/' . trim( $uri, '/' );
-		if ( '/' . self::PUBLIC_PATH !== $uri ) {
+	public static function maybe_render(): void {
+		if ( '1' !== (string) get_query_var( self::QUERY_VAR ) ) {
 			return;
 		}
+
 		self::render();
 		exit;
 	}
@@ -41,7 +95,7 @@ class Template {
 	/**
 	 * Emit the standalone HTML page.
 	 */
-	private static function render() {
+	private static function render(): void {
 		nocache_headers();
 		header( 'Content-Type: text/html; charset=UTF-8' );
 

@@ -21,6 +21,6 @@ Agent guidance for this repository. General project information belongs in `READ
 ## Development Notes
 
 - Build and lint commands are defined in `package.json` and `composer.json`; prefer those scripts instead of inventing ad hoc commands.
-- Keep `/smart-search` served without requiring a rewrite flush.
+- Serve `/smart-search/` through WordPress rewrite APIs, and keep activation or deactivation rewrite handling aligned with route changes.
 - Keep asset cache busting based on `filemtime()` unless the build or release flow changes.
 - Preserve dark mode through CSS custom properties and the `data-theme` attribute.

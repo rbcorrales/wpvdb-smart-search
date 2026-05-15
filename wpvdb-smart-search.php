@@ -33,6 +33,9 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once __DIR__ . '/includes/class-cli.php';
 }
 
+register_activation_hook( __FILE__, [ Template::class, 'activate' ] );
+register_deactivation_hook( __FILE__, [ Template::class, 'deactivate' ] );
+
 /**
  * Show an admin notice when wpvdb-search is missing.
  */
