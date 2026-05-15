@@ -331,7 +331,7 @@ msgstr "Demasiadas solicitudes, por favor espera un momento."
 msgid "Smart Search"
 msgstr "Smart Search"
 
-#: wpvdb-smart-search.php:45
+#: wpvdb-smart-search.php:48
 msgid "WPVDB Smart Search requires the WPVDB Search plugin to be active."
 msgstr "WPVDB Smart Search requiere que el plugin WPVDB Search esté activo."
 
