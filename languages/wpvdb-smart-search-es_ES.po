@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPVDB Smart Search 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpvdb-smart-"
 "search\n"
-"POT-Creation-Date: 2026-05-13T21:38:44+00:00\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-05-13 14:03-0500\n"
 "Last-Translator: Ramon Corrales\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -323,7 +323,7 @@ msgstr "Describe, no definas…"
 msgid "Ask it like a human, not a SQL query…"
 msgstr "Pregunta como un humano, no como una consulta SQL…"
 
-#: includes/class-rest.php:67
+#: includes/class-rest.php:71
 msgid "Too many requests, slow down."
 msgstr "Demasiadas solicitudes, por favor espera un momento."
 
@@ -331,7 +331,7 @@ msgstr "Demasiadas solicitudes, por favor espera un momento."
 msgid "Smart Search"
 msgstr "Smart Search"
 
-#: wpvdb-smart-search.php:44
+#: wpvdb-smart-search.php:45
 msgid "WPVDB Smart Search requires the WPVDB Search plugin to be active."
 msgstr "WPVDB Smart Search requiere que el plugin WPVDB Search esté activo."
 

@@ -21,9 +21,11 @@ jobs:
       tag: ${{ github.event.inputs.tag || github.ref_name }}
       plugin-slug: wpvdb-smart-search
       plugin-file: wpvdb-smart-search.php
+      composer-install: true
       bun-install: true
       bun-lint-command: bun run lint
       build-command: bun run build
+      i18n-command: bun run i18n
       required-artifacts: |
         dist/smart-search.js
         dist/smart-search.css
