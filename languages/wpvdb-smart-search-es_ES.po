@@ -366,8 +366,8 @@ msgid "© %d Automattic"
 msgstr "© %d Automattic"
 
 #: src/App.jsx:354
-msgid "Powered by <wpvdb /> on MariaDB 11.8"
-msgstr "Funciona con <wpvdb /> sobre MariaDB 11.8"
+msgid "Powered by <wpvdb />"
+msgstr "Funciona con <wpvdb />"
 
 #. translators: %d: requests per minute allowed per IP.
 #: src/App.jsx:375

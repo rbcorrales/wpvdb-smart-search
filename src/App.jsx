@@ -352,7 +352,7 @@ export default function App( { config } ) {
 					<span>
 						{ createInterpolateElement(
 							__(
-								'Powered by <wpvdb /> on MariaDB 11.8',
+								'Powered by <wpvdb />',
 								'wpvdb-smart-search'
 							),
 							{
